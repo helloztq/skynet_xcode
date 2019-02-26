@@ -90,10 +90,6 @@
 		82EF4C7C222527D600576E84 /* service_logger.c in Sources */ = {isa = PBXBuildFile; fileRef = 82EF4BD32225175B00576E84 /* service_logger.c */; };
 		82EF4C7D222527DA00576E84 /* service_snlua.c in Sources */ = {isa = PBXBuildFile; fileRef = 82EF4BD12225175B00576E84 /* service_snlua.c */; };
 		82EF4C7E222527DE00576E84 /* service_harbor.c in Sources */ = {isa = PBXBuildFile; fileRef = 82EF4BCF2225175B00576E84 /* service_harbor.c */; };
-		82EF4C8B222529F600576E84 /* service in CopyFiles */ = {isa = PBXBuildFile; fileRef = 82EF4C8A222529DB00576E84 /* service */; };
-		82EF4C8C222529F600576E84 /* examples in CopyFiles */ = {isa = PBXBuildFile; fileRef = 82EF4C87222529C600576E84 /* examples */; };
-		82EF4C8D222529F600576E84 /* lualib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 82EF4C88222529C600576E84 /* lualib */; };
-		82EF4C8E222529F600576E84 /* test in CopyFiles */ = {isa = PBXBuildFile; fileRef = 82EF4C89222529C600576E84 /* test */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,10 +179,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				82EF4C8B222529F600576E84 /* service in CopyFiles */,
-				82EF4C8C222529F600576E84 /* examples in CopyFiles */,
-				82EF4C8D222529F600576E84 /* lualib in CopyFiles */,
-				82EF4C8E222529F600576E84 /* test in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
