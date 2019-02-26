@@ -1,10 +1,12 @@
 # skynet_xcode
 
-### Macros:
+### Preprocessor Macros:
 	NOUSE_JEMALLOC
 	LPEG_DEBUG
 
-### Enable Modules: false
+### Apple Clang-Language-Modules
+	Enable Modules: false
 
-### Linker Flags: -fPIC -dynamiclib -Wl,-undefined,dynamic_lookup
+### Linking
+	Ohter Linker Flags: -fPIC -dynamiclib -Wl,-undefined,dynamic_lookup
 
