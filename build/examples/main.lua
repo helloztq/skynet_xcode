@@ -1,5 +1,6 @@
 local skynet = require "skynet"
 local sprotoloader = require "sprotoloader"
+-- require "dump"
 
 local max_client = 64
 

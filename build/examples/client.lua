@@ -1,10 +1,14 @@
 package.cpath = "luaclib/?.so"
 package.path = "lualib/?.lua;examples/?.lua"
+local json = require "cjson"
+local json_safe = require "cjson.safe"
+
+require "dump"
 
 if _VERSION ~= "Lua 5.3" then
 	error "Use lua 5.3"
 end
-
+----[[
 local socket = require "client.socket"
 local proto = require "proto"
 local sproto = require "sproto"
@@ -52,9 +56,13 @@ local session = 0
 
 local function send_request(name, args)
 	session = session + 1
-	local str = request(name, args, session)
+	-- local str = request(name, args, session)
+	local str = json.encode({
+		cmd = name,
+		val = args
+	})
 	send_package(fd, str)
-	print("Request:", session)
+	print("Request:", session, str)
 end
 
 local last = ""
@@ -93,8 +101,10 @@ local function dispatch_package()
 		if not v then
 			break
 		end
+		local rep = json_safe.decode(v)
+		dump(rep, dispatch_package)
 
-		print_package(host:dispatch(v))
+		-- print_package(host:dispatch(v))
 	end
 end
 
@@ -113,3 +123,8 @@ while true do
 		socket.usleep(100)
 	end
 end
+--]]
+-- local str = json.encode({a = 123, b = 234})
+-- print(str)
+-- print((json_safe.decode(str)))
+-- dump(json_safe.decode(str))
